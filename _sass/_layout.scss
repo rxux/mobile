@@ -90,5 +90,41 @@ header {
 }
 
 //footer 
+.site-footer {
+    .wrapper {
+        .row {
+            background:#f5f5f5;
+            padding:25px 0;
 
+            a {
+                color:#58585a;
+                cursor:pointer;
+                margin:0 10px;
+            }
 
+            .footer-info {
+                margin:0 auto;
+                max-width:250px;
+                height:40px;
+                font-size:0.85em;
+                .rx-logo {
+                    background:url(../images/LogoRexel.png) center center no-repeat;
+                    background-size:contain;
+                    height:100%;
+                    width:35%;
+                    float:left;
+                }
+                .info {
+                    padding-top:2px;
+                }
+            }
+        }
+    }
+}
+
+.page-content {
+    min-height:430px;
+    .wrapper {
+
+    }
+}
