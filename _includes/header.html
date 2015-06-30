@@ -1,9 +1,42 @@
-<header class="site-header">
+<nav class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+<div class="navmenu-brand" href="#">
+  Customer Name <br>
+  <a href="#">Sign Out</a>
+</div>
+
+  <ul class="nav navmenu-nav nav-list">
+    <li class="nav-item"><a href="#">Home</a></li>
+    <li class="nav-item"><a href="#">All Products <i class="material-icons pull-right">keyboard_arrow_right</i></a></li>
+    <li>
+      <ul class="navmenu-info">
+        <li class="info-title">My Company</li>
+        <li class="info-copy">CompanyNameHere</li>
+        <li class="info-title">My Home Store</li>
+        <li class="info-copy">
+          Address Line 1 <br>
+          Address Line 2 <br>
+          Address Line 3 <br>
+          Address Line 4
+        </li>
+        <li class="info-title">My Account Manager</li>
+        <li class="info-copy">
+          Name Here <br>
+          555.555.5555 <br>
+          email@email.com
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<header class="navbar navbar-default site-header">
 
   <div class="wrapper">
     <div class="row">
 
-      <div class="col-xs-2 visible-xs-block"><i class="material-icons icon-2x">menu</i></div>
+      <div class="col-xs-2 visible-xs-block"><i class="material-icons icon-2x" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">menu</i></div>
+
       <div class="col-xs-8 col-sm-12 text-center"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></div>
       <div class="col-xs-2 visible-xs-block">
         <i class="material-icons pull-right icon-2x">local_grocery_store<div class="cart-count">4</div></i>
@@ -31,3 +64,4 @@
     </div>
   </div>
 </header>
+
