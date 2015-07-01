@@ -233,7 +233,8 @@ header {
             }
 
             .header-links {
-                height:50px;
+                height:20px;
+                margin-top:30px;
                 position:relative;
                 span {
                     position:absolute;
@@ -246,6 +247,60 @@ header {
                         color:#58585a;
                         font-size:1.3em;
                         margin-right:12px;
+                    }
+                }
+            }
+
+            .header-links-dropdown {
+                padding-top:0;
+                padding-bottom:0;
+                height:0;
+                overflow:hidden;
+                @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+                        margin-left:30px;
+                    }
+
+                .about-dropdown, 
+                .industries-dropdown,
+                .service-dropdown 
+                {
+                    display:none;
+                    margin-bottom:15px;
+
+                    border-width:1px 0 0 0;
+                border-style:solid;
+                border-color:#ccc;
+                }
+
+                ul {
+                    padding-left:0;
+                    list-style-type:none;
+                    height:135px;
+                    padding-left:20px;
+
+                    &.first-list {
+                        padding-left:10px;
+                        padding-right:20px;
+                        border-width:0 1px 0 0;
+                        border-color:#ccc;
+                        border-style:solid;
+                    }
+
+                    &.middle-list {
+                        padding-right:20px;
+                        padding-left:20px;
+                        border-width:0 1px 0 0;
+                        border-color:#ccc;
+                        border-style:solid;
+                    }
+
+                    li {
+                        
+                        margin:10px 0;
+
+                        a {
+                            color:#58585a;
+                        }
                     }
                 }
             }

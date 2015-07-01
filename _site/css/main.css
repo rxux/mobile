@@ -6559,7 +6559,8 @@ header {
       border-radius: 3px;
       font-family: 'Open Sans', sans-serif; }
     header .wrapper .row .header-links {
-      height: 50px;
+      height: 20px;
+      margin-top: 30px;
       position: relative; }
       header .wrapper .row .header-links span {
         position: absolute;
@@ -6571,6 +6572,43 @@ header {
           color: #58585a;
           font-size: 1.3em;
           margin-right: 12px; }
+    header .wrapper .row .header-links-dropdown {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 0;
+      overflow: hidden; }
+      @media (min-width: 1024px) and (max-width: 1199px) {
+        header .wrapper .row .header-links-dropdown {
+          margin-left: 30px; } }
+      header .wrapper .row .header-links-dropdown .about-dropdown,
+      header .wrapper .row .header-links-dropdown .industries-dropdown,
+      header .wrapper .row .header-links-dropdown .service-dropdown {
+        display: none;
+        margin-bottom: 15px;
+        border-width: 1px 0 0 0;
+        border-style: solid;
+        border-color: #ccc; }
+      header .wrapper .row .header-links-dropdown ul {
+        padding-left: 0;
+        list-style-type: none;
+        height: 135px;
+        padding-left: 20px; }
+        header .wrapper .row .header-links-dropdown ul.first-list {
+          padding-left: 10px;
+          padding-right: 20px;
+          border-width: 0 1px 0 0;
+          border-color: #ccc;
+          border-style: solid; }
+        header .wrapper .row .header-links-dropdown ul.middle-list {
+          padding-right: 20px;
+          padding-left: 20px;
+          border-width: 0 1px 0 0;
+          border-color: #ccc;
+          border-style: solid; }
+        header .wrapper .row .header-links-dropdown ul li {
+          margin: 10px 0; }
+          header .wrapper .row .header-links-dropdown ul li a {
+            color: #58585a; }
 
 .site-footer {
   overflow: hidden; }

@@ -70,14 +70,19 @@
           <div class="col-md-3 first-LeftPad-0"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></div>
           
           <!-- Header Links and Dropdowns (Desktop Only) -->
+          <span class="header-links-wrapper">
           <div class="col-md-9 header-links">
             <span>
-              <a href="#About">About</a>            <!-- This launches 'about' dropdown      -->
-              <a href="#Industries">Industries</a>  <!-- This launches 'industries' dropdown -->
-              <a href="#Service">Service</a>        <!-- This launches 'service' dropdown    -->
+              <a class="header-link header-link-about">About</a>                 <!-- This launches 'about' dropdown      -->
+              <a class="header-link header-link-industries">Industries</a>       <!-- This launches 'industries' dropdown -->
+              <a class="header-link header-link-service">Service</a>             <!-- This launches 'service' dropdown    -->
             </span>
           </div>
-          
+
+          <div class="clearfix"></div>
+
+          {% include headerlinks_dropdown.html %}
+          </span>
           <div class="clearfix"></div>
 
           <!-- Products Dropdown (Desktop Only) -->
