@@ -4,10 +4,10 @@
     <!-- HUD Bar (Desktop Only) -->
     <div class="col-md-12 hidden-xs hidden-sm hud-bar">
       <div class="container">
-        <span><a href="tel:888-555-5555">888.555.5555</a></span> <!-- Phone Number -->
-        <span><a href="#livechat">Live Chat</a></span>           <!-- Live Chat Link -->
+        <span><a href="tel:888-555-5555">888.555.5555</a></span> <!-- Phone Number Link  -->
+        <span><a href="#livechat">Live Chat</a></span>           <!-- Live Chat Link     -->
         <span><a href="#StoreLocator">Store Locator</a></span>   <!-- Store Locator Link -->
-        <span><a href="#QuickOrder">Quick Order</a></span>       <!-- Quick Order Link -->
+        <span><a href="#QuickOrder">Quick Order</a></span>       <!-- Quick Order Link   -->
         <span class="pull-right">
           <span class="customer-name"><a href="#CustomerName">Customer Name</a></span> <!-- Customer Name (If Logged in)-->
           <span class="horiz-seperator">|</span>
@@ -30,12 +30,13 @@
       <!-- Shopping Cart (Mobile Only) -->
       <div class="col-xs-2 visible-xs-block">
         <a href="#Cart">
-          <i class="material-icons pull-right icon-2x">local_grocery_store<div class="cart-count">4</div></i>
+          <i class="material-icons pull-right icon-2x">local_grocery_store<div class="cart-count">4</div></i> <!-- items in cart here -->
         </a>
       </div>
       
       <!-- Products Dropdown (Tablet Only) -->
       <div class="col-sm-2 visible-sm-block">
+        <!-- This launches products dropdown -->
         <button class="btn btn-default btn-block products-btn">Products   <i class="material-icons">arrow_drop_down</i></button>
       </div>
       
@@ -49,12 +50,15 @@
       </form>
       
       <!-- My Account (Tablet Only) -->
-      <div class="col-sm-1 visible-sm-block text-center remove-padding"><i class="material-icons icon-2x">person</i></div>
+      <div class="col-sm-1 visible-sm-block text-center remove-padding">
+      <a href="#MyAccount"> <!-- My account link  here-->
+        <i class="material-icons icon-2x">person</i></div>
+      </a>
 
       <!-- Shopping Cart (Tablet Only) -->
       <div class="col-sm-1 visible-sm-block text-center">
-        <a href="#Cart">
-          <i class="material-icons icon-2x">local_grocery_store<div class="cart-count">4</div></i>
+        <a href="#Cart"> <!-- My Cart Link here -->
+          <i class="material-icons icon-2x">local_grocery_store<div class="cart-count">4</div></i> <!-- items in cart here -->
         </a>
       </div>
       
@@ -68,9 +72,9 @@
           <!-- Header Links and Dropdowns (Desktop Only) -->
           <div class="col-md-9 header-links">
             <span>
-              <a href="#About">About</a>
-              <a href="#Industries">Industries</a>
-              <a href="#Service">Service</a>
+              <a href="#About">About</a>            <!-- This launches 'about' dropdown      -->
+              <a href="#Industries">Industries</a>  <!-- This launches 'industries' dropdown -->
+              <a href="#Service">Service</a>        <!-- This launches 'service' dropdown    -->
             </span>
           </div>
           
@@ -78,6 +82,7 @@
 
           <!-- Products Dropdown (Desktop Only) -->
           <div class="col-md-3 first-LeftPad-0">
+            <!-- This launches products dropdown -->
             <button class="btn btn-default btn-block products-btn">Browse Products   <i class="material-icons">arrow_drop_down</i></button>
           </div>
 
@@ -92,13 +97,13 @@
 
           <!-- My Account (Desktop Only) -->
           <div class="col-md-1 desktop-only text-center remove-padding">
-            <a href="#MyAccount"><i class="material-icons icon-2x">person</i></a>
+            <a href="#MyAccount"><i class="material-icons icon-2x">person</i></a> <!-- My account link -->
           </div>
 
           <!-- Shopping Cart (Desktop Only) -->
           <div class="col-md-1 desktop-only text-center">
-            <a href="#Cart">
-              <i class="material-icons icon-2x">local_grocery_store<div class="cart-count">4</div></i>
+            <a href="#Cart"> <!-- My Cart Link here -->
+              <i class="material-icons icon-2x">local_grocery_store<div class="cart-count">4</div></i> <!-- items in cart here -->
             </a>
           </div>
 

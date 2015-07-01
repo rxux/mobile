@@ -1,13 +1,13 @@
 <nav class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
-<div class="navmenu-brand" href="#">
+<div class="navmenu-brand" >
   
   <span>Customer Name</span> <br> <!-- Customers Name Here -->
-  <a href="#">Sign Out</a> <!-- If Signed-In, This will say 'Sign Out', If NOT Signed-in This will say 'Sign In' and direct you to the Sign-In Page/Modal -->
+  <a href="#SignOut">Sign Out</a> <!-- If Signed-In, This will say 'Sign Out', If NOT Signed-in This will say 'Sign In' and direct you to the Sign-In Page/Modal -->
 </div>
 
   <ul class="nav navmenu-nav nav-list">
-    <li class="nav-item"><a href="#">Home</a></li> <!-- 'Home' Link -->
-    <li class="nav-item"><a href="#">All Products <i class="material-icons pull-right">keyboard_arrow_right</i></a></li> <!-- 'All Products' Link -->
+    <li class="nav-item"><a href="{{ site.baseurl }}/">Home</a></li> <!-- 'Home' Link -->
+    <li class="nav-item"><a href="#AllProducts">All Products <i class="material-icons pull-right">keyboard_arrow_right</i></a></li> <!-- 'All Products' Link -->
     <li>
       <ul class="navmenu-info">
         <li class="info-title">My Company</li> 
@@ -22,8 +22,8 @@
         <li class="info-title">My Account Manager</li>
         <li class="info-copy">
           <span>Name Here</span>    <br> <!-- My Account Managers Name Here -->
-          <span>555.555.5555</span> <br> <!-- My Account Managers Phone Number Here -->
-          <span>Email Address</span>     <!-- My Account Managers Email Address Here -->
+          <span><a href="tel:555-555-5555">555.555.5555</a></span> <br> <!-- My Account Managers Phone Number Here -->
+          <span><a href="mailto:#EmailAddress">Email Address</a></span>     <!-- My Account Managers Email Address Here -->
         </li>
       </ul>
     </li>

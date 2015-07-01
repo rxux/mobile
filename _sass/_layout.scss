@@ -40,9 +40,9 @@ body {
         right:0;
         content:"";
         z-index:-1;
-        -webkit-box-shadow: -15px 0px 36px -8px rgba(0,0,0,0.55);
-        -moz-box-shadow: -15px 0px 36px -8px rgba(0,0,0,0.55);
-        box-shadow: -15px 0px 36px -8px rgba(0,0,0,0.55);
+        -webkit-box-shadow: -15px 0px 36px -8px rgba(0,0,0,0.24);
+        -moz-box-shadow: -15px 0px 36px -8px rgba(0,0,0,0.24);
+        box-shadow: -15px 0px 36px -8px rgba(0,0,0,0.24);
     }
 }
 
@@ -318,6 +318,10 @@ header {
         .info-copy {
             font-size:0.75em;
             margin-bottom:15px;
+
+            a {
+                color:#58585a;
+            }
         }
     }
 }
