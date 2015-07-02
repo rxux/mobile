@@ -6613,7 +6613,8 @@ body:after {
 i.material-icons {
   cursor: pointer;
   position: relative;
-  color: #58585a; }
+  color: #58585a;
+  z-index: 1; }
   i.material-icons.icon-2x {
     font-size: 2em; }
 
@@ -6693,10 +6694,14 @@ header .wrapper .row.header-row {
         background-position: 0 0; } }
   header .wrapper .row.header-row .form-group, header .wrapper .row.header-row select, header .wrapper .row.header-row .products-btn {
     margin-top: 10px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    z-index: 1;
+    position: relative; }
     header .wrapper .row.header-row .form-group:hover, header .wrapper .row.header-row .form-group:focus, header .wrapper .row.header-row select:hover, header .wrapper .row.header-row select:focus, header .wrapper .row.header-row .products-btn:hover, header .wrapper .row.header-row .products-btn:focus {
       background: #ffffff;
       border-color: #cccccc; }
+  header .wrapper .row.header-row .form-group:hover {
+    background: #f5f5f5; }
   header .wrapper .row.header-row .col-sm-1 {
     margin-top: 15px;
     margin-bottom: 0; }
@@ -6717,17 +6722,20 @@ header .wrapper .row.header-row {
         width: 5.33333%; } }
   header .wrapper .row.header-row .search-button {
     position: absolute;
-    right: 10px;
-    top: 13px;
+    right: 5px;
+    top: 6px;
     background-color: transparent;
     border: none;
     color: #999; }
-  header .wrapper .row.header-row .products-btn {
-    text-align: left; }
-    header .wrapper .row.header-row .products-btn i {
+  header .wrapper .row.header-row .products-btn span {
+    display: inline-block;
+    position: relative;
+    width: 10px; }
+    header .wrapper .row.header-row .products-btn span i {
       position: absolute;
-      top: 14px;
-      right: 14px; }
+      top: -18px;
+      width: 24px;
+      right: -9px; }
   header .wrapper .row.header-row .cart-count {
     background: #ee7803;
     padding: 3px 4px;
@@ -6764,7 +6772,7 @@ header .wrapper .row.header-row {
     header .wrapper .row.header-row .header-links-dropdown .industries-dropdown,
     header .wrapper .row.header-row .header-links-dropdown .service-dropdown {
       display: none;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       border-width: 1px 0 0 0;
       border-style: solid;
       border-color: #ccc; }
@@ -6814,40 +6822,85 @@ header .wrapper .row.products-dropdown {
       padding: 15px 0; }
       header .wrapper .row.products-dropdown ul li a {
         color: #58585a; }
-header .wrapper .myaccount-dropdown-wrapper {
-  position: relative; }
+header .wrapper .myaccount-dropdown-wrapper,
+header .wrapper .minicart-dropdown-wrapper {
+  position: absolute; }
   @media (min-width: 768px) and (max-width: 1023px) {
-    header .wrapper .myaccount-dropdown-wrapper {
+    header .wrapper .myaccount-dropdown-wrapper,
+    header .wrapper .minicart-dropdown-wrapper {
       width: 100%; } }
-  header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown {
+  header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown,
+  header .wrapper .myaccount-dropdown-wrapper .minicart-dropdown,
+  header .wrapper .minicart-dropdown-wrapper .myaccount-dropdown,
+  header .wrapper .minicart-dropdown-wrapper .minicart-dropdown {
     background: #f5f5f5;
     position: absolute;
     right: 0;
+    top: 50px;
     padding: 24px;
     -webkit-box-shadow: 0px 15px 14px -8px rgba(0, 0, 0, 0.24);
     -moz-box-shadow: 0px 15px 14px -8px rgba(0, 0, 0, 0.24);
     box-shadow: 0px 15px 14px -8px rgba(0, 0, 0, 0.24); }
-    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown input {
+    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown input,
+    header .wrapper .myaccount-dropdown-wrapper .minicart-dropdown input,
+    header .wrapper .minicart-dropdown-wrapper .myaccount-dropdown input,
+    header .wrapper .minicart-dropdown-wrapper .minicart-dropdown input {
       margin-bottom: 12px; }
-    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown .remember-me-label {
+    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown .remember-me-label,
+    header .wrapper .myaccount-dropdown-wrapper .minicart-dropdown .remember-me-label,
+    header .wrapper .minicart-dropdown-wrapper .myaccount-dropdown .remember-me-label,
+    header .wrapper .minicart-dropdown-wrapper .minicart-dropdown .remember-me-label {
       font-weight: normal;
       position: relative;
       top: -5px;
       left: 5px; }
-    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown .bootstrap-switch {
+    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown .bootstrap-switch,
+    header .wrapper .myaccount-dropdown-wrapper .minicart-dropdown .bootstrap-switch,
+    header .wrapper .minicart-dropdown-wrapper .myaccount-dropdown .bootstrap-switch,
+    header .wrapper .minicart-dropdown-wrapper .minicart-dropdown .bootstrap-switch {
       margin-bottom: 12px; }
-    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown p {
+    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown p,
+    header .wrapper .myaccount-dropdown-wrapper .minicart-dropdown p,
+    header .wrapper .minicart-dropdown-wrapper .myaccount-dropdown p,
+    header .wrapper .minicart-dropdown-wrapper .minicart-dropdown p {
       font-size: 0.85em;
       margin-top: 9px; }
-    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown a {
+    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown a,
+    header .wrapper .myaccount-dropdown-wrapper .minicart-dropdown a,
+    header .wrapper .minicart-dropdown-wrapper .myaccount-dropdown a,
+    header .wrapper .minicart-dropdown-wrapper .minicart-dropdown a {
       color: #58585a; }
-    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown .greeting {
+    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown .greeting,
+    header .wrapper .myaccount-dropdown-wrapper .minicart-dropdown .greeting,
+    header .wrapper .minicart-dropdown-wrapper .myaccount-dropdown .greeting,
+    header .wrapper .minicart-dropdown-wrapper .minicart-dropdown .greeting {
       font-size: 1.2em; }
-    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown .info-title {
+    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown .info-title,
+    header .wrapper .myaccount-dropdown-wrapper .minicart-dropdown .info-title,
+    header .wrapper .minicart-dropdown-wrapper .myaccount-dropdown .info-title,
+    header .wrapper .minicart-dropdown-wrapper .minicart-dropdown .info-title {
       font-size: 1em;
       margin-bottom: 0; }
-    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown span {
+    header .wrapper .myaccount-dropdown-wrapper .myaccount-dropdown span,
+    header .wrapper .myaccount-dropdown-wrapper .minicart-dropdown span,
+    header .wrapper .minicart-dropdown-wrapper .myaccount-dropdown span,
+    header .wrapper .minicart-dropdown-wrapper .minicart-dropdown span {
       font-size: 0.85em; }
+
+.overlay-content {
+  display: none; }
+
+.dropdown-action {
+  position: relative;
+  height: 50px;
+  display: block; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .dropdown-action {
+      top: 50px;
+      right: -10px; }
+      .dropdown-action .myaccount-target,
+      .dropdown-action .minicart-target {
+        top: -50px; } }
 
 .site-footer {
   overflow: hidden; }

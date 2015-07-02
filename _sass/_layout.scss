@@ -63,6 +63,7 @@ i.material-icons {
     cursor:pointer;
     position: relative;
     color:#58585a;
+    z-index: 1;
 
     &.icon-2x {
         font-size:2em;
@@ -175,12 +176,18 @@ header {
             .form-group, select, .products-btn {
                 margin-top:10px;
                 margin-bottom:0;
+                z-index: 1;
+                position: relative;
 
                 &:hover, &:focus {
                     background:#ffffff;
                     border-color:#cccccc;
                 }
 
+            }
+
+            .form-group:hover {
+                background:#f5f5f5;
             }
             .col-sm-1 {
                 margin-top:15px;
@@ -215,18 +222,23 @@ header {
 
             .search-button {
                 position: absolute;
-                right: 10px;
-                top: 13px;
+                right: 5px;
+                top: 6px;
                 background-color: transparent;
                 border: none;
                 color: #999;
             }
             .products-btn {
-                text-align:left;
-                i {
-                    position: absolute;
-                    top:14px;
-                    right:14px;
+                span {
+                    display:inline-block;
+                    position:relative;
+                    width:10px;
+                    i {
+                        position: absolute;
+                        top:-18px;
+                        width:24px;
+                        right:-9px;
+                    }
                 }
             }
             .cart-count {
@@ -269,12 +281,14 @@ header {
                     margin-left:30px;
                 }
 
+
+
                 .about-dropdown, 
                 .industries-dropdown,
                 .service-dropdown 
                 {
                     display:none;
-                    margin-bottom:15px;
+                    margin-bottom:25px;
 
                     border-width:1px 0 0 0;
                 border-style:solid;
@@ -357,17 +371,21 @@ header {
                 }
             }
         }
-        .myaccount-dropdown-wrapper {
-            position:relative;
+        .myaccount-dropdown-wrapper,
+        .minicart-dropdown-wrapper {
+
+            position:absolute;
 
             @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
                     width:100%;
                 }
 
-            .myaccount-dropdown {
+            .myaccount-dropdown,
+            .minicart-dropdown {
                 background:#f5f5f5;
                 position:absolute;
                 right:0;
+                top:50px;
                 padding:24px;
                 
                 -webkit-box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
@@ -413,6 +431,29 @@ header {
         }
     }
 }
+
+//overlay content
+.overlay-content {
+    display:none;
+}
+
+.dropdown-action {
+    position: relative;
+    height: 50px;
+    display: block;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        top:50px;
+        right:-10px;    
+
+        .myaccount-target,
+        .minicart-target {
+            top:-50px;
+        }
+    }
+}
+
+
 
 //footer 
 .site-footer {

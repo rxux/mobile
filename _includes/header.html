@@ -30,14 +30,14 @@
       <!-- Shopping Cart (Mobile Only) -->
       <div class="col-xs-2 visible-xs-block">
         <a href="#Cart">
-          <i class="material-icons pull-right icon-2x">local_grocery_store<div class="cart-count">4</div></i> <!-- items in cart here -->
+          <i class="material-icons pull-right icon-2x">local_grocery_store<div class="cart-count signed-in">4</div></i> <!-- items in cart here -->
         </a>
       </div>
       
       <!-- Products Dropdown (Tablet Only) -->
       <div class="col-sm-2 visible-sm-block">
         <!-- This launches products dropdown -->
-        <button class="btn btn-default btn-block products-btn">Products   <i class="material-icons">arrow_drop_down</i></button>
+        <button class="btn btn-default btn-block products-btn">Products <span><i class="material-icons">arrow_drop_down</i></span></button>
       </div>
       
       <!-- Search Bar (Mobile & Tablet Only) -->
@@ -49,19 +49,26 @@
         </div>
       </form>
       
-      <!-- My Account (Tablet Only) -->
-      <div class="col-sm-1 visible-sm-block text-center remove-padding">
-      <a href="#MyAccount"> <!-- My account link  here-->
-        <i class="material-icons icon-2x">person</i></div>
-      </a>
+      <span class="dropdown-action hidden-xs hidden-md hidden-lg">
+        <!-- My Account (Tablet Only) -->
+        <div class="col-sm-1 visible-sm-block text-center remove-padding overlay-target myaccount-target">
+          <i class="material-icons icon-2x">person</i>
+        </div>
+        
+        <!-- Shopping Cart (Tablet Only) -->
+        <div class="col-sm-1 visible-sm-block text-center overlay-target minicart-target">
+            <i class="material-icons icon-2x">local_grocery_store<div class="cart-count signed-in">4</div></i> <!-- items in cart here -->
+        </div>
 
-      <!-- Shopping Cart (Tablet Only) -->
-      <div class="col-sm-1 visible-sm-block text-center">
-        <a href="#Cart"> <!-- My Cart Link here -->
-          <i class="material-icons icon-2x">local_grocery_store<div class="cart-count">4</div></i> <!-- items in cart here -->
-        </a>
-      </div>
-      
+        <!-- BEGIN MY ACCOUNT DROPDOWN -->
+            {% include myaccount_dropdown.html %}
+            <!-- END MY ACCOUNT DROPDOWN -->
+
+            <!-- BEGIN MINICART DROPDOWN -->
+            {% include minicart_dropdown.html %}
+            <!-- END MINICART DROPDOWN -->
+      </span>
+
       <!-- Desktop Header (Desktop Only) -->
       <div class="col-md-12 hidden-xs hidden-sm">
         <div class="container">
@@ -88,7 +95,7 @@
           <!-- Products Dropdown (Desktop Only) -->
           <div class="col-md-3 first-LeftPad-0">
             <!-- This launches products dropdown -->
-            <button class="btn btn-default btn-block products-btn">Browse Products   <i class="material-icons">arrow_drop_down</i></button>
+            <button class="btn btn-default btn-block products-btn">Browse Products <span><i class="material-icons">arrow_drop_down</i></span></button>
           </div>
 
           <!-- Search Bar (Desktop Only) -->
@@ -99,18 +106,26 @@
               <button class="search-button" type="submit"><i class="material-icons">search</i></button>
             </div>
           </form>
+          
+          <span class="dropdown-action">
+            <!-- My Account (Desktop Only) -->
+            <div class="col-md-1 desktop-only text-center remove-padding overlay-target myaccount-target">
+              <i class="material-icons icon-2x">person</i>
+            </div>
 
-          <!-- My Account (Desktop Only) -->
-          <div class="col-md-1 desktop-only text-center remove-padding">
-            <a href="#MyAccount"><i class="material-icons icon-2x">person</i></a> <!-- My account link -->
-          </div>
+            <!-- Shopping Cart (Desktop Only) -->
+            <div class="col-md-1 desktop-only text-center overlay-target minicart-target">
+                <i class="material-icons icon-2x">local_grocery_store<div class="cart-count signed-in">4</div></i> <!-- items in cart here -->
+            </div>
+            <!-- BEGIN MY ACCOUNT DROPDOWN -->
+            {% include myaccount_dropdown.html %}
+            <!-- END MY ACCOUNT DROPDOWN -->
 
-          <!-- Shopping Cart (Desktop Only) -->
-          <div class="col-md-1 desktop-only text-center">
-            <a href="#Cart"> <!-- My Cart Link here -->
-              <i class="material-icons icon-2x">local_grocery_store<div class="cart-count">4</div></i> <!-- items in cart here -->
-            </a>
-          </div>
+            <!-- BEGIN MINICART DROPDOWN -->
+            {% include minicart_dropdown.html %}
+            <!-- END MINICART DROPDOWN -->
+
+          </span>
 
         </div>
       </div> <!-- End Desktop Header -->
@@ -123,8 +138,7 @@
     {% include products_dropdown.html %}
     <!-- END PRODUCT CATEGORIES DROPDOWN -->
     
-    {% include myaccount_dropdown.html %}
-
+    
   </div>
 </header>
 
