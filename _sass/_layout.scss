@@ -30,6 +30,7 @@ html,body {
 }
 
 
+
 //drop shadow in hamburger
 body {
     &:after {
@@ -396,7 +397,17 @@ header {
 
                 a {
                     color:#58585a;
+                }
 
+                .greeting {
+                    font-size:1.2em;
+                }
+                .info-title {
+                    font-size:1em;
+                    margin-bottom:0;
+                }
+                span {
+                    font-size:0.85em;
                 }
             }
         }

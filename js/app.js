@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
 
+
 	$("[name='remember-me-checkbox']").bootstrapSwitch();
 
 	$('.header-link, .header-links-dropdown').mouseenter(function() {
@@ -54,3 +55,12 @@ $(document).ready(function() {
 
 
 });
+
+
+// THIS PART IS JUST FOR SHOWING LOGGED IN VS LOGGED OUT STATES
+if(window.location.href.indexOf("signed-in=yes") > -1) {
+	$('body').find('.signed-out').remove();	
+} else  {
+	$('body').find('.signed-in').remove();
+}
+
