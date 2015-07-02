@@ -74,15 +74,17 @@ i.material-icons {
 
 // header
 header {
-    overflow:hidden;
-
+    
     .wrapper {
+
         
         .hud-bar {
             background:#001c39;
             color:#ffffff;
             padding:6px 0;
             margin-bottom:20px;
+            position:relative;
+            z-index:3;
 
             .container {
                 font-size:12px;
@@ -137,10 +139,16 @@ header {
                 }
             }
         }
-
-        .row {
+        
+        .row.header-row {
             background:#f5f5f5;
             padding:15px 10px;
+            
+            @media (min-width: $screen-sm-min) {
+                -webkit-box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
+                -moz-box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
+                box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
+            }
 
             .site-title {
                 width:60%;
@@ -257,8 +265,8 @@ header {
                 height:0;
                 overflow:hidden;
                 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-                        margin-left:30px;
-                    }
+                    margin-left:30px;
+                }
 
                 .about-dropdown, 
                 .industries-dropdown,
@@ -301,6 +309,49 @@ header {
                         a {
                             color:#58585a;
                         }
+                    }
+                }
+            }
+        }
+
+        .row.products-dropdown {
+            
+            display:none;
+            overflow:hidden;
+            margin-left:0;
+            margin-right:0;
+
+            .container {
+
+                padding:24px;
+
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+                    width:100%;
+                    padding:24px 45px;
+                }
+
+                @media (min-width: $screen-md-min) {
+                    border:1px solid #ccc;
+                    border-top-width:0;
+                }
+            }
+
+            ul {
+                list-style-type:none;
+                padding-left:0;
+                font-size:1.15em;
+
+                &.col2,
+                &.col3 {
+                    padding-left:42px;
+                }
+
+                li {
+
+                    padding:15px 0;
+                    
+                    a {
+                        color:#58585a;
                     }
                 }
             }

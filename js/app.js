@@ -42,5 +42,13 @@ $(document).ready(function() {
 		});
 	});
 
+	$('.products-btn').click(function() {
+		if (!$('.products-dropdown').hasClass('open')) {
+			$('.products-dropdown').stop().slideDown(325).addClass('open');
+		} else {
+			$('.products-dropdown').stop().slideUp(325).removeClass('open');
+		}
+	});
+
 
 });
