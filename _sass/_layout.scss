@@ -356,6 +356,50 @@ header {
                 }
             }
         }
+        .myaccount-dropdown-wrapper {
+            position:relative;
+
+            @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+                    width:100%;
+                }
+
+            .myaccount-dropdown {
+                background:#f5f5f5;
+                position:absolute;
+                right:0;
+                padding:24px;
+                
+                -webkit-box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
+                -moz-box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
+                box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
+
+
+                input {
+                    margin-bottom:12px;
+                }
+
+                .remember-me-label {
+                    font-weight:normal;
+                    position:relative;
+                    top:-5px;
+                    left:5px;
+                }
+
+                .bootstrap-switch {
+                    margin-bottom:12px;
+                }
+
+                p {
+                    font-size:0.85em;
+                    margin-top:9px;
+                }
+
+                a {
+                    color:#58585a;
+
+                }
+            }
+        }
     }
 }
 

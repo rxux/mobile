@@ -2,6 +2,8 @@
 
 $(document).ready(function() {
 
+	$("[name='remember-me-checkbox']").bootstrapSwitch();
+
 	$('.header-link, .header-links-dropdown').mouseenter(function() {
 		$('.header-links-dropdown').stop().animate({height: '155px'},275).addClass('open');
 		if ($(this).hasClass('header-link-about')) {
