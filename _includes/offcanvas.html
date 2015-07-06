@@ -1,14 +1,15 @@
 <nav class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
 <div class="navmenu-brand" >
   
-  <span>Customer Name</span> <br> <!-- Customers Name Here -->
-  <a href="#SignOut">Sign Out</a> <!-- If Signed-In, This will say 'Sign Out', If NOT Signed-in This will say 'Sign In' and direct you to the Sign-In Page/Modal -->
+  <span class="signed-in">Customer Name</span> <br> <!-- Customers Name Here -->
+  <a href="#SignOut" class="signed-in">Sign Out</a> <!-- If Signed-In, This will say 'Sign Out', If NOT Signed-in This will say 'Sign In' and direct you to the Sign-In Page/Modal -->
+  <a href="#SignOut" class="signed-out">Sign In</a>
 </div>
 
   <ul class="nav navmenu-nav nav-list">
     <li class="nav-item"><a href="{{ site.baseurl }}/">Home</a></li> <!-- 'Home' Link -->
     <li class="nav-item"><a href="#AllProducts">All Products <i class="material-icons pull-right">keyboard_arrow_right</i></a></li> <!-- 'All Products' Link -->
-    <li>
+    <li class="signed-in">
       <ul class="navmenu-info">
         <li class="info-title">My Company</li> 
         <li class="info-copy">Company Name Here</li> <!-- Company Name Here -->

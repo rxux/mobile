@@ -1,7 +1,7 @@
 // custom
 
 $(document).ready(function() {
-
+	$("#my-menu").mmenu();
 	$("[name='remember-me-checkbox']").bootstrapSwitch();
 
 	$('.header-link, .header-links-dropdown').mouseenter(function() {
