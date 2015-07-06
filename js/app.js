@@ -1,7 +1,28 @@
 // custom
 
 $(document).ready(function() {
-	$("#my-menu").mmenu();
+	$("#my-menu").mmenu({
+		"navbar": {
+            "title": " ",
+        },
+        "extensions": [
+            "pageshadow"
+        ],
+               "navbars": [
+                  {
+                     "position": "bottom",
+                     "content": [
+                        //"<a class='fa fa-envelope' href='#/'></a>",
+                        //"<a class='fa fa-twitter' href='#/'></a>",
+                        //"<a class='fa fa-facebook' href='#/'></a>"
+                        " "
+                     ]
+                  }
+               ]
+    });
+
+
+
 	$("[name='remember-me-checkbox']").bootstrapSwitch();
 
 	$('.header-link, .header-links-dropdown').mouseenter(function() {
@@ -73,14 +94,16 @@ $(document).ready(function() {
 		$('.overlay-content').stop().fadeOut(275);
 	});
 
+	// THIS PART IS JUST FOR SHOWING LOGGED IN VS LOGGED OUT STATES 
+	// NOT FOR PRODUCTION
+	if(window.location.href.indexOf("signed-in=yes") > -1) {
+		$('body').find('.signed-out').remove();	
+	} else  {
+		$('body').find('.signed-in').remove();
+	}
+
 });
 
 
-// THIS PART IS JUST FOR SHOWING LOGGED IN VS LOGGED OUT STATES 
-// NOT FOR PRODUCTION
-if(window.location.href.indexOf("signed-in=yes") > -1) {
-	$('body').find('.signed-out').remove();	
-} else  {
-	$('body').find('.signed-in').remove();
-}
+
 

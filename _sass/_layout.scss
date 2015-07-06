@@ -484,9 +484,37 @@ header {
     }
 }
 
+
+#my-menu {
+    .nav-customer-name,
+    .nav-sign-out {
+        background:#0068b4;
+        a {
+            color:#fff;
+            font-weight:100;
+        }
+    }
+    .nav-customer-name {
+        font-size:1.5em;
+            a {
+                padding-bottom:0;
+        }
+    }
+    p {
+        width:90%;
+        padding: 25px 20px 20px 45px;
+
+        .info-copy {
+            font-size:0.90em;
+            
+            a {
+                color:#58585a;
+            }
+        }
+    }
+}
 //navmenu
-.navmenu {
-    z-index: -1;
+#my-456456 {
 
     &.navmenu-default {
         background-color:#fff;
