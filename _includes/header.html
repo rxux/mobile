@@ -1,15 +1,15 @@
 <header class="navbar navbar-default site-header">
 
   <div class="wrapper">
-    <!-- HUD Bar (Desktop Only) -->
+    <!-- HUD BAR /DESKTOP/ -->
     <div class="col-md-12 hidden-xs hidden-sm hud-bar">
       <div class="container">
-        <span><a href="tel:888-555-5555">888.555.5555</a></span> <!-- Phone Number Link  -->
-        <span><a href="#livechat">Live Chat</a></span>           <!-- Live Chat Link     -->
-        <span><a href="#StoreLocator">Store Locator</a></span>   <!-- Store Locator Link -->
-        <span><a href="#QuickOrder">Quick Order</a></span>       <!-- Quick Order Link   -->
+        <span><a href="tel:888-555-5555">888.555.5555</a></span> <!-- PHONE NUMBER LINK HERE  -->
+        <span><a href="#livechat">Live Chat</a></span>           <!-- LIVE CHAT LINK HERE     -->
+        <span><a href="#StoreLocator">Store Locator</a></span>   <!-- STORE LOCATOR LINK HERE -->
+        <span><a href="#QuickOrder">Quick Order</a></span>       <!-- QUICK ORDER LINK HERE   -->
         <span class="pull-right signed-in">
-          <span class="customer-name"><a href="#CustomerName">Customer Name</a></span> <!-- Customer Name -->
+          <span class="customer-name"><a href="#CustomerName">Customer Name</a></span> <!-- CUSTOMER NAME HERE -->
           <span class="horiz-seperator">|</span>
           <span class="shipping-address-link"><a href="#ShippingAddress"><strong>Ship-To Address: </strong>
             <span class="shipping-address">Shipping Address Here</span></a> <!-- Shipping Address -->
@@ -17,36 +17,35 @@
         </span>
 
         <span class="pull-right signed-out">
-          <span><a href="#SignIn">Sign In</a></span> <!-- Sign In Link -->
+          <span><a href="#SignIn">Sign In</a></span> <!-- LINK TO SIGN IN PAGE HERE -->
         </span>
       </div>
     </div>
-    <!-- End HUD Bar -->
+    <!-- END HUD BAR /DESKTOP/ -->
 
     <div class="row header-row">
 
-      <!-- Hamburger Icon (Mobile Only) -->
+      <!-- HAMBURGER ICON /MOBILE/ -->
       <div class="col-xs-2 visible-xs-block"><a href="#my-menu"><i class="material-icons icon-2x">menu</i></a></div>
-      <!-- <div class="col-xs-2 visible-xs-block"><i class="material-icons icon-2x" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">menu</i></div> -->
 
-      <!-- Logo (Mobile & Tablet Only) -->
+      <!-- SITE LOGO /MOBILE/TABLET/ -->
       <div class="col-xs-8 col-sm-12 text-center hidden-md hidden-lg"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></div>
 
-      <!-- Shopping Cart (Mobile Only) -->
+      <!-- SHOPPING CART BUTTON /MOBILE/ -->
       <div class="col-xs-2 visible-xs-block">
         <a href="#Cart">
-          <i class="material-icons pull-right icon-2x">local_grocery_store<div class="cart-count signed-in">4</div></i> <!-- items in cart here -->
+          <i class="material-icons pull-right icon-2x">local_grocery_store<div class="cart-count signed-in">0</div></i> <!-- NUMBER OF ITEMS IN CART HERE -->
         </a>
       </div>
       
-      <!-- Products Dropdown (Tablet Only) -->
+      <!-- BROWSE PRODUCTS BUTTON /TABLET/ -->
       <div class="col-sm-2 visible-sm-block">
         <!-- This launches products dropdown -->
         <button class="btn btn-default btn-block products-btn">Products <span><i class="material-icons">arrow_drop_down</i></span></button>
       </div>
       
-      <!-- Search Bar (Mobile & Tablet Only) -->
-      <form class="col-xs-12 col-sm-8 hidden-md hidden-lg">
+      <!-- SEARCH BAR /MOBILE/TABLET/ -->
+      <form class="col-xs-12 col-sm-8 hidden-md hidden-lg search-form">
         <div class="form-group">
           <label for="search" class="hidden">Search</label>
           <input class="form-control" name="search" placeholder="Search">
@@ -55,56 +54,58 @@
       </form>
       
       <span class="dropdown-action hidden-xs hidden-md hidden-lg">
-        <!-- My Account (Tablet Only) -->
+        <!-- MY ACCOUNT BUTTON /TABLET/ -->
         <div class="col-sm-1 visible-sm-block text-center remove-padding overlay-target myaccount-target">
           <i class="material-icons icon-2x">person</i>
         </div>
         
-        <!-- Shopping Cart (Tablet Only) -->
+        <!-- SHOPPING CART BUTTON /TABLET/ -->
         <div class="col-sm-1 visible-sm-block text-center overlay-target minicart-target">
-            <i class="material-icons icon-2x">local_grocery_store<div class="cart-count signed-in">4</div></i> <!-- items in cart here -->
+            <i class="material-icons icon-2x">local_grocery_store<div class="cart-count signed-in">4</div></i> <!-- NUMBER OF ITEMS IN CART HERE -->
         </div>
 
         <!-- BEGIN MY ACCOUNT DROPDOWN -->
-            {% include myaccount_dropdown.html %}
-            <!-- END MY ACCOUNT DROPDOWN -->
+          {% include myaccount_dropdown.html %}
+        <!-- END MY ACCOUNT DROPDOWN -->
 
-            <!-- BEGIN MINICART DROPDOWN -->
-            {% include minicart_dropdown.html %}
-            <!-- END MINICART DROPDOWN -->
+        <!-- BEGIN MINICART DROPDOWN -->
+          {% include minicart_dropdown.html %}
+        <!-- END MINICART DROPDOWN -->
+
       </span>
 
-      <!-- Desktop Header (Desktop Only) -->
+      <!-- DESKTOP HEADER /DESKTOP/ -->
       <div class="col-md-12 hidden-xs hidden-sm">
         <div class="container">
 
-          <!-- Logo (Desktop Only) -->
+          <!-- SITE LOGO /DESKTOP/ -->
           <div class="col-md-3 first-LeftPad-0"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></div>
           
-          <!-- Header Links and Dropdowns (Desktop Only) -->
+          <!-- HEADER LINKS AND DROPDOWN /DESKTOP/ -->
           <span class="header-links-wrapper">
           <div class="col-md-9 header-links">
             <span>
-              <a class="header-link header-link-about">About</a>                 <!-- This launches 'about' dropdown      -->
-              <a class="header-link header-link-industries">Industries</a>       <!-- This launches 'industries' dropdown -->
-              <a class="header-link header-link-service">Service</a>             <!-- This launches 'service' dropdown    -->
+              <a class="header-link header-link-about">About</a>             
+              <a class="header-link header-link-industries">Industries</a>      
+              <a class="header-link header-link-service">Service</a> 
             </span>
           </div>
 
           <div class="clearfix"></div>
 
-          {% include headerlinks_dropdown.html %}
+          <!-- HEADER LINKS DROPDOWN  /DESKTOP/ -->
+            {% include headerlinks_dropdown.html %}
+          <!-- END HEADER LINKS DROPDOWN /DESKTOP/ -->
           </span>
           <div class="clearfix"></div>
 
-          <!-- Products Dropdown (Desktop Only) -->
+          <!-- PRODUCTS DROPDOWN BUTTON /DESKTOP/ -->
           <div class="col-md-3 first-LeftPad-0">
-            <!-- This launches products dropdown -->
             <button class="btn btn-default btn-block products-btn">Browse Products <span><i class="material-icons">arrow_drop_down</i></span></button>
           </div>
 
-          <!-- Search Bar (Desktop Only) -->
-          <form class="col-md-7 desktop-only">
+          <!-- SEARCH BAR /DESKTOP/ -->
+          <form class="col-md-7 desktop-only search-form">
             <div class="form-group">
               <label for="search" class="hidden">Search</label>
               <input class="form-control" name="search" placeholder="Search For Products">
@@ -113,31 +114,31 @@
           </form>
           
           <span class="dropdown-action">
-            <!-- My Account (Desktop Only) -->
+            <!-- MY ACCOUNT BUTTON /DESKTOP/ -->
             <div class="col-md-1 desktop-only text-center remove-padding overlay-target myaccount-target">
               <i class="material-icons icon-2x">person</i>
             </div>
 
-            <!-- Shopping Cart (Desktop Only) -->
+            <!-- SHOPPING CART BUTTON /DESKTOP/ -->
             <div class="col-md-1 desktop-only text-center overlay-target minicart-target">
                 <i class="material-icons icon-2x">local_grocery_store<div class="cart-count signed-in">4</div></i> <!-- items in cart here -->
             </div>
-            <!-- BEGIN MY ACCOUNT DROPDOWN -->
-            {% include myaccount_dropdown.html %}
-            <!-- END MY ACCOUNT DROPDOWN -->
+            <!-- BEGIN MY ACCOUNT DROPDOWN /DESKTOP/ -->
+              {% include myaccount_dropdown.html %}
+            <!-- END MY ACCOUNT DROPDOWN /DESKTOP/ -->
 
-            <!-- BEGIN MINICART DROPDOWN -->
-            {% include minicart_dropdown.html %}
-            <!-- END MINICART DROPDOWN -->
+            <!-- BEGIN MINICART DROPDOWN /DESKTOP/ -->
+              {% include minicart_dropdown.html %}
+            <!-- END MINICART DROPDOWN /DESKTOP/ -->
 
           </span>
 
         </div>
-      </div> <!-- End Desktop Header -->
+      </div> <!-- END DESKTOP HEADER /DESKTOP/ -->
 
       
 
-    </div> <!-- End Row -->
+    </div>
     
     <!-- BEGIN PRODUCT CATEGORIES DROPDOWN -->
     {% include products_dropdown.html %}

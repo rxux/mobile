@@ -11,7 +11,7 @@
 // Reset and dependencies
 @import "bootstrap/normalize";
 @import "bootstrap/print";
-@import "bootstrap/glyphicons";
+@import "bootstrap/fonts";
 
 // Core CSS
 @import "bootstrap/scaffolding";
@@ -51,6 +51,7 @@
 @import "bootstrap/popovers";
 @import "bootstrap/carousel";
 @import "bootstrap/switches";
+@import "bootstrap/mmenu";
 
 // Utility classes
 @import "bootstrap/utilities";

@@ -21,6 +21,15 @@ $(document).ready(function() {
                ]
     });
 
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+
 
 
 	$("[name='remember-me-checkbox']").bootstrapSwitch();
@@ -92,6 +101,19 @@ $(document).ready(function() {
 
 	$('.dropdown-action').mouseleave(function() {
 		$('.overlay-content').stop().fadeOut(275);
+	});
+
+	var _cartCount = parseInt($('.cart-count').html());
+	if (_cartCount <= 0) {
+		$('.cart-count').hide();
+	}
+
+	$('.home-login-target').click(function() {
+		$('.myaccount-dropdown.mobile').stop().slideToggle();
+	});
+
+	$('.home-product-target').click(function() {
+		$('.home-product-dropdown.mobile').stop().slideToggle();
 	});
 
 	// THIS PART IS JUST FOR SHOWING LOGGED IN VS LOGGED OUT STATES 

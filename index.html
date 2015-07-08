@@ -2,10 +2,89 @@
 layout: default
 ---
 
-<div class="home text-center">
+<div class="home">
 
-  <h1>Home Page</h1>
+  <div class="flexslider">
+    <ul class="slides">
+      <li>
+        <img class="visible-xs-block" src="http://placehold.it/768x300/3C3E42?text=mobile+768x300" />
+        <img class="visible-sm-block" src="http://placehold.it/1024x425/3C3E42?text=tablet+1024x425" />
+        <img class="visible-md-block visible-lg-block" src="http://placehold.it/1024x425/3C3E42?text=desktop" />
+      </li>
+      <li>
+        <img class="visible-xs-block" src="http://placehold.it/768x300/8FA7C2/333333?text=mobile+768x300" />
+        <img class="visible-sm-block" src="http://placehold.it/1024x425/8FA7C2/333333?text=tablet+1024x425" />
+        <img class="visible-md-block visible-lg-block" src="http://placehold.it/1024x425/8FA7C2/333333?text=desktop" />
+      </li>
+      <li>
+        <img class="visible-xs-block" src="http://placehold.it/768x300/D7C7A7/333333?text=mobile+768x300" />
+        <img class="visible-sm-block" src="http://placehold.it/1024x425/D7C7A7/333333?text=tablet+1024x425" />
+        <img class="visible-md-block visible-lg-block" src="http://placehold.it/1024x425/D7C7A7/333333?text=desktop" />
+      </li>
+    </ul>
+  </div>
 
+  <div class="home-menus visible-xs-block">
 
+    <ul class="home-login nav-list">
+      <li class="nav-item home-login-target">Sign In <i class="material-icons pull-right">remove</i></li>
+        <!-- IF SIGNED-OUT (CURRENTLY DISPLAYED) -->
+      <li class="myaccount-dropdown mobile col-md-12">
+        <form>
+          <div class="form-group">
+            <label for="username" class="hidden"><spring:theme code="mobtab.username.text" text="Username" var="usernameText" /></label>  
+            <input data-role="none" class="form-control" name="username" placeholder="usernameText" required>        
+            <label for="password" class="hidden">Password</label>                
+            <input data-role="none" class="form-control" name="password" type="password" placeholder="Password" required> 
+            <input data-role="none" type="checkbox" name="remember-me-checkbox"> <label class="remember-me-label" for="remember-me-checkbox">Remember Me</label>
+            <button data-role="none" class="btn btn-primary btn-block" type="submit">Sign In</button>          
+          </div>
+        </form>
+        <a data-role="none" class="forgot-pw" href="#ForgotPassword"><strong>Forgot Password?</strong></a> 
+        <p>By signing in, you agree to our <a href="#TermsAndConditions">terms and conditions</a>.</p> 
+      </li>
+
+<!-- IF SIGNED-IN 
+<div class="container myaccount-dropdown-wrapper hidden-xs overlay-content">
+    <div class="myaccount-dropdown col-md-3">
+        <p class="greeting">Hello, Customer Name</p>         INSERT LOCALIZED VARIABLE FOR 'HELLO,' FOLLOWED BY VARIABLE FOR CUSTOMERS FIRST AND LAST NAME 
+        <hr>
+        <p class="info-title">General Support</p>            INSERT LOCALIZED VARIABLE FOR 'GENERAL SUPPORT' 
+        <span><a href="tel:555-555-5555">555.555.5555</a></span>   INSERT VARIABLE FOR SUPPORT PHONE NUMBER 
+        <p class="info-title">My Company</p>             INSERT LOCALIZED VARIABLE FOR 'MY COMPANY' 
+        <span>Company Name Here</span>                 INSERT VARIABLE FOR USERS COMPANY NAME 
+        <p class="info-title">My Home Store</p>            INSERT LOCALIZED VARIABLE FOR 'MY HOME STORE' 
+        <span><a href="tel:555-555-5555">555.555.5555</a></span>   INSERT VARIABLE FOR USERS HOME STORE PHONE NUMBER (TWO TIMES) 
+        <p class="info-title">My Account Manager</p>         INSERT LOCALIZED VARIABLE FOR 'MY ACCOUNT MANAGER' 
+        <span><a href="tel:555-555-5555">555.555.5555</a></span>   INSERT VARIABLE FOR USERS ACCOUNT MANAGER PHONE NUMBER (TWO TIMES) 
+    </div>
+</div> -->
+
+    </ul>
+    <ul class="home-product-accordion nav-list">
+      <li class="nav-item home-product-target">All Products <i class="material-icons pull-right">remove</i></li>
+      <li>
+        <ul class="home-product-dropdown mobile">
+          <li class="nav-item nav-item-light"><a href="#BoxesEnclosures">Boxes, Enclosures <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#ConduitDuctsRaceways">Conduit, Ducts, Raceways <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#ConnectorsCrimpsTermination">Connectors, Crimps, Termination <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#ControlAutomation">Control, Automation <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#DataVideoAudio">Data, Video, Audio <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#Fasteners">Fasteners <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#HeatFans">Heat, Fans <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#LampsBulbsBallasts">Lamps, Bulbs, Ballasts <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#LightingLightingControls">Lighting, Lighting Controls<i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#Motors">Motors <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#PowerDistribution">Power Distribution <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#SignalingSecurity">Signaling, Security <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#SolarCleanEnergy">Solar/Clean Energy <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#ToolsTestingMeters">Tools, Testing, Meters <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#Utility">Utility <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#WiresCablesCords">Wires, Cables, Cords <i class="material-icons pull-right">&#xE315;</i></a></li>
+          <li class="nav-item nav-item-light"><a href="#WiringDevices">Wiring Devices <i class="material-icons pull-right">&#xE315;</i></a></li>
+        </ul>
+      </li>
+    </li>
+  </div>
 
 </div>
