@@ -116,6 +116,16 @@ $(document).ready(function() {
 		$('.home-product-dropdown.mobile').stop().slideToggle();
 	});
 
+	$('.products-btn').on("click", function (event) {
+    	$('.arrow-img').toggleClass('rotate');
+    	$('.arrow-img').toggleClass('rotate2');
+	});
+
+	$('.truncate').truncate({
+		width: 'auto',
+		multiline: true
+	});
+
 	// THIS PART IS JUST FOR SHOWING LOGGED IN VS LOGGED OUT STATES 
 	// NOT FOR PRODUCTION
 	if(window.location.href.indexOf("signed-in=yes") > -1) {

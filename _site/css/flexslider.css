@@ -166,7 +166,7 @@ html[xmlns] .flexslider .slides {
 .flex-control-nav {
   width: 100%;
   position: absolute;
-  bottom: 20px;
+  bottom: 2%;
   text-align: center; }
 
 .flex-control-nav li {
@@ -176,20 +176,25 @@ html[xmlns] .flexslider .slides {
   *display: inline; }
 
 .flex-control-paging li a {
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   display: block;
   background: #fff;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0);
+  border: 3px solid rgba(255, 255, 255, 0.8);
   cursor: pointer;
   text-indent: -9999px;
-  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  border-radius: 20px; }
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1); }
+
+.flex-control-paging li a:hover {
+  background: #fff;
+  background: white; }
 
 .flex-control-paging li a.flex-active {
   background: #fff;

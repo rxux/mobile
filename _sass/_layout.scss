@@ -4,6 +4,8 @@ html,body {
     font-weight: 400;
     font-style: normal;
     color:#58585a;
+    height:100%;
+
 
     a {
         text-decoration:none !important;
@@ -13,9 +15,19 @@ html,body {
         list-style-type:none;
         padding-left:0;
     }
+    p {
+        font-size:14px;
+    }
+
+    .container {
+
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            width:100%;
+        }
+    }
 }
 
-//drop shadow in hamburger
+
 
 .form-control {
     -webkit-box-shadow: none;
@@ -116,11 +128,11 @@ header {
             background:#f5f5f5;
             padding:15px 10px;
             
-            @media (min-width: $screen-sm-min) {
-                -webkit-box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
-                -moz-box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
-                box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
-            }
+            
+                -webkit-box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.18);
+                -moz-box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.18);
+                box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.18);
+            
 
             .site-title {
                 width:60%;
@@ -180,7 +192,7 @@ header {
             }
 
             .col-md-1.desktop-only {
-                margin-top:15px;
+                // margin-top:15px;
                 margin-bottom:0;
 
                 @media (min-width: $screen-md-min) {
@@ -207,9 +219,25 @@ header {
                     width:10px;
                     i {
                         position: absolute;
-                        top:-18px;
+                        top:-16px;
                         width:24px;
                         right:-9px;
+                    }
+
+                    .rotate {
+                        -webkit-transform: rotate(-180deg);
+                            -ms-transform: rotate(-180deg);
+                                transform: rotate(-180deg);
+                        -webkit-transition:.3s;
+                                transition:.3s;
+                                top: -17px;
+                    }
+                    .rotate2 {
+                      -webkit-transform: rotate(0deg);
+                          -ms-transform: rotate(0deg);
+                              transform: rotate(0deg);
+                      -webkit-transition:.3s;
+                              transition:.3s;
                     }
                 }
             }
@@ -308,6 +336,11 @@ header {
             margin-left:0;
             margin-right:0;
 
+            -webkit-box-shadow: inset 0px 0px 9px -1px rgba(0,0,0,0.18);
+            -moz-box-shadow: inset 0px 0px 9px -1px rgba(0,0,0,0.18);
+            box-shadow: inset 0px 0px 9px -1px rgba(0,0,0,0.18);
+            border-bottom: 1px solid #f5f5f5;
+
             .container {
 
                 padding:24px;
@@ -316,17 +349,11 @@ header {
                     width:100%;
                     padding:24px 45px;
                 }
-
-                @media (min-width: $screen-md-min) {
-                    border:1px solid #ccc;
-                    border-top-width:0;
-                }
             }
 
             ul {
                 list-style-type:none;
                 padding-left:0;
-                font-size:1.15em;
 
                 &.col2,
                 &.col3 {
@@ -358,11 +385,8 @@ header {
                 background:#f5f5f5;
                 position:absolute;
                 right:0;
-                top:60px;
+                top:50px;
                 padding:24px;
-                -webkit-box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
-                -moz-box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
-                box-shadow: 0px 15px 14px -8px rgba(0,0,0,0.24);
 
                 input { margin-bottom:12px; }
 
@@ -381,7 +405,6 @@ header {
                 .bootstrap-switch { margin-bottom:12px; }
 
                 p {
-                    font-size:0.85em;
                     margin-top:9px;
                 }
 
@@ -395,6 +418,61 @@ header {
                 }
 
                 span { font-size:0.85em; }
+                
+                // MINI CART TABLE
+                table.minicart-table {
+                    text-align:left;
+                    margin-top:9px;
+
+                    tr {
+                        margin-bottom:21px;
+                        display:block;
+
+                        &:last-child {
+                            margin-bottom: 3px;
+                        }
+
+                        td {
+                            height:50px;
+                            display:inline-block;
+                        
+                            &.minicart-product-description {
+                                width:225px;
+                                height:50px;
+                                word-wrap:normal;
+                            }
+
+                            &.minicart-product-quantity {
+                                margin-left:30px;
+                                margin-right:30px;
+                                width:50px;
+
+                            }
+                        }
+                    }
+                }
+                
+                .minicart-hr {
+                    margin-top:0;
+                    margin-bottom:0;
+                }
+                
+                .empty-cart {
+                  display: block;
+                  padding: 12px 100px 30px;
+                }
+                
+                &:before{
+                    content: ""; 
+                    z-index: -1; 
+                    position: absolute; 
+                    top: 22px; 
+                    right: 2px; 
+                    bottom: 2px; 
+                    left: 2px; 
+                    -webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.18);
+                    box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.18);
+                }    
             }
         }
     }
@@ -408,15 +486,16 @@ header {
 .dropdown-action {
     position: relative;
     height: 50px;
+    top:20px;
     display: block;
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-        top:50px;
+        top:75px;
         right:-10px;    
 
         .myaccount-target,
         .minicart-target {
-            top:-50px;
+            top:-72px;
         }
     }
 }
@@ -427,6 +506,11 @@ header {
 .site-footer {
     background:#f5f5f5;
     overflow:hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    
     .wrapper {
         padding:25px 0;
         .row {
@@ -539,9 +623,13 @@ header {
 
 //home page
 .home-menus {
+    background:#f5f5f5;
+
     .myaccount-dropdown {
-        padding:3px 18px 30px;
         background: #f5f5f5;
+        padding-left: 20px;
+        padding-bottom: 30px;
+        padding-right: 20px;
         input,button {
             margin:18px auto;
         }
@@ -554,4 +642,66 @@ header {
         }
     }
 }
+.home-page-product-cats {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { 
+        width:100%;
+    }
 
+    h2 {
+        font-size:14px;
+        margin-top:30px;
+    }
+    ul {
+        li {
+            text-align:center;
+            height: 140px;
+            margin:30px 0;
+            a {
+                color:#58585a;
+                font-size:0.90em;
+
+                img {
+                    display:block;
+                    margin:0 auto;
+                    margin-bottom:10px;
+                    height:96px;
+                    width:96px;
+                }
+            }
+        }
+    }
+}
+
+// FOR 5 COLUMNS ON HOME PAGE TABLET/DESKTOP
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1024px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}

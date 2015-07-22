@@ -1,11 +1,49 @@
+<!-- IF CART HAS ITEMS -->
 <div class="container minicart-dropdown-wrapper hidden-xs overlay-content signed-in">
-	<div class="minicart-dropdown col-md-4 text-center">
-		<h1>SIGNED IN<br>MINICART HERE</h1>
+	<div class="minicart-dropdown col-xl-4 text-center">
+		<p class="text-left"><strong>Recently added (#)</strong></p>
+		<hr class="minicart-hr"><br>
+		<table class="minicart-table">
+
+			<!-- REPEAT THIS <tr> FOR EACH ITEM IN CART. THE FOLLOWING 2 <tr>'S ARE FOR ILLUSTRATIVE PURPOSES. -->
+			<tr class="minicart-product-row">
+				<td class="minicart-product-description truncate">Really really long product Name goes here. Truncation starts here |||</td> 
+				<td class="minicart-product-quantity">10,000</td>
+				<td class="minicart-product-price">100,000,000</td>
+			</tr>
+			
+
+
+			<!-- THE 2 <tr>'S BELOW THIS LINE ARE FOR ILLUSTRATIVE PURPOSES. DELETE UPON COMPLETING THE COMPONENT. -->
+			<tr class="minicart-product-row">
+				<td class="minicart-product-description truncate">Really really long product Name goes here. Truncation starts here |||</td>
+				<td class="minicart-product-quantity">10,000</td>
+				<td class="minicart-product-price">100,000,000</td>
+			</tr>
+
+			<tr class="minicart-product-row">
+				<td class="minicart-product-description truncate">Really really long product Name goes here. Truncation starts here |||</td>
+				<td class="minicart-product-quantity">10,000</td>
+				<td class="minicart-product-price">100,000,000</td>
+			</tr>
+			<!-- THE 2 <tr>'S ABOVE THIS LINE ARE FOR ILLUSTRATIVE PURPOSES. DELETE UPON COMPLETING THE COMPONENT. -->
+
+
+
+		</table>
+		<hr class="minicart-hr">
+		<p class="text-right minicart-price"><strong>$999,999,999.00</strong></p> <!-- TOTAL PRICE -->
+		<button class="btn btn-primary btn-block">View Cart</button> 
 	</div>
 </div>
 
-<div class="container minicart-dropdown-wrapper hidden-xs overlay-content signed-out">
-	<div class="minicart-dropdown col-md-4 text-center">
-		<h1>SIGNED OUT<br>MINICART HERE</h1>
+
+<!-- IF CART IS EMPTY -->
+<!-- <div class="container minicart-dropdown-wrapper hidden-xs overlay-content signed-out">
+	<div class="minicart-dropdown text-center">
+		<div class="empty-cart">
+			<p>There are no items in your cart</p>
+			<button class="btn btn-primary btn-block">View Cart</button>
+		</div>
 	</div>
-</div>
+</div> -->
